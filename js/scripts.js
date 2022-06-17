@@ -60,20 +60,38 @@ function Size(sizes){
   this.sizes = sizes;
 }
 
+//define variables/objects for pizza toppings 
+let extraCheese = { toppings: "Extra Cheese" };
+let pepperoni = {toppings: "Pepperoni"};
+let blackOlives = {toppings: "Black Olives"};
+let mushrooms = {toppings: "Mushrooms"};
+let bellPeppers = {topping: "Bell Peppers"};
+let bacon = {topping: "Bacon"};
+let sausage = {topping: "Sausage"};
 
-let allToppings = new Topping(["Extra Cheese", "Pepperoni", "Black Olives", "Mushrooms", "Bell Peppers", "Bacon", "Sausage"])
-let allSizes = new Size(["Regular", "Large"])
+let allToppings = { toppings: [extraCheese, pepperoni, blackOlives, mushrooms, bellPeppers, bacon, sausage] };
+
+//define variables/objects for pizza sizes
+let regular = {sizes: "Regular"};
+let large = {sizes: "Large"};
+
+let allSizes = {sizes: [regular, large]};
+
+// let allToppings = new Topping("Extra Cheese", "Pepperoni", "Black Olives", "Mushrooms", "Bell Peppers", "Bacon", "Sausage")
+// let allSizes = new Size("Regular", "Large")
 
 orderArray = [allToppings, allSizes]
+console.log(orderArray)
 
-function checkOrderDetails(toppings, sizes, orderArray){
+function checkOrderDetails(userToppings, userSize, orderArray){
     emptyArray = []
-    orderArray.forEach(function(object){
-      if (object.toppings === toppings[i] || object.sizes === sizes[i]){
-        emptyArray.push(object);
+    orderArray.forEach(function(bothObjects){
+      if (bothObjects.allToppings === userToppings || bothObjects.allSizes === userSize){
+        emptyArray.push("test");
     }
   });
   return emptyArray;
 }
 
 checkOrderDetails("Extra Cheese", "Regular", orderArray);
+
