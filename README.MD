@@ -36,9 +36,10 @@ Copyright (c) _6/17/2022_ _Grace Kostanich_
 **Describe:** _Pizza();_
 
 
-**Test:** _It will return a Pizza object with two properties for toppings and size_  
+**Test:** _It will use the Pizza constructor to create Pizza object(s) containing these properties: toppings and sides_  
 
-Code: _const myPizza = new Pizza(["anchovies", "pineapple"], "medium");_  
+Code: _let myPizza = new Pizza("Cheese", "Salad");_  
+      _myPizza;_  
 
-Expected Output: _Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }_  
+Expected Output: _Pizza {toppings: 'Cheese', sides: 'Salad'}_  
 
