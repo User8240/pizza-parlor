@@ -23,3 +23,57 @@ function userOrder(toppings, size, pizzaOrderArray) {
 }
 userOrder("Extra Cheese", "Regular", pizzaOrderArray);
 console.log(emptyArray);
+
+//-----------------------------------------------------------------------
+function Topping(toppings){
+  this.toppings = toppings;
+}
+
+function Size(sizes){
+  this.sizes = sizes;
+}
+
+let allToppings = new Topping("Extra Cheese", "Pepperoni", "Black Olives", "Mushrooms", "Bell Peppers", "Bacon", "Sausage")
+let allSizes = new Size("Regular", "Large")
+
+orderArray = [allToppings, allSizes]
+console.log(orderArray);
+
+function checkOrderDetails(toppings, sizes, orderArray){
+    emptyArray = []
+    orderArray.forEach(function(object){
+      if (object.toppings === toppings && object.sizes === sizes){
+        emptyArray.push(object);
+    }
+  });
+  return emptyArray;
+}
+
+checkOrderDetails("Extra Cheese", "Regular", orderArray);
+
+//-------------------------------------------------------------
+function Topping(toppings){
+  this.toppings = toppings;
+}
+
+function Size(sizes){
+  this.sizes = sizes;
+}
+
+
+let allToppings = new Topping(["Extra Cheese", "Pepperoni", "Black Olives", "Mushrooms", "Bell Peppers", "Bacon", "Sausage"])
+let allSizes = new Size(["Regular", "Large"])
+
+orderArray = [allToppings, allSizes]
+
+function checkOrderDetails(toppings, sizes, orderArray){
+    emptyArray = []
+    orderArray.forEach(function(object){
+      if (object.toppings === toppings[i] || object.sizes === sizes[i]){
+        emptyArray.push(object);
+    }
+  });
+  return emptyArray;
+}
+
+checkOrderDetails("Extra Cheese", "Regular", orderArray);
