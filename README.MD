@@ -36,22 +36,22 @@ Copyright (c) _6/17/2022_ _Grace Kostanich_
 **Describe:** _Pizza();_
 
 
-**Test:** _It will use the Pizza constructor to create Pizza object(s) containing these properties: toppings and sides_  
+**Test:** _It will use the Pizza constructor to create Pizza object(s) containing these properties: toppings and size_  
 
-Code: _let myPizza = new Pizza("Cheese", "Salad");_  
+Code: _let myPizza = new Pizza("Cheese", "Regular");_  
       _myPizza;_  
 
-Expected Output: _Pizza {toppings: 'Cheese', sides: 'Salad'}_  
+Expected Output: _Pizza {toppings: 'Cheese', size: 'Regular'}_  
 
-**Test:** _It will create a predefined list of topping and sides for each property; It'll include the list as another object inside of toppings and sides_  
+**Test:** _It will create a predefined list of topping and size for each property; It'll include the list as another object inside of toppings and size_  
 
-Code: _let allToppings = {toppings: ["extraCheese", "Peperoni"], sides: ["Salad", "Breadsticks", "Sugar Bites"]};_  
+Code: _let allToppings = {toppings: ["extraCheese", "Peperoni"], size: ["Regular", "Large"]};_  
 _allToppings.toppings;_  
-_allToppings.sides;_  
+_allToppings.size;_  
 
 Expected Output: _allToppings;_  
-_{toppings: Array(2), sides: Array(3)}_  
+_{toppings: Array(2), size: Array(3)}_  
  _allToppings.toppings_  
 _(2) ['extraCheese', 'Peperoni']_  
-_allToppings.sides_  
-_(3) ['Salad', 'Breadsticks', 'Sugar Bites']_    
+_allToppings.size_  
+_(3) ['Regular', 'Large']_    
