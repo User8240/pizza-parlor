@@ -6,9 +6,7 @@ function Pizza(toppings, sides){
 // myPizza;
 // let extraCheese = {toppings: "Extra Cheese"};
 // let Peperoni = {toppings: "Pepperoni"};
-
 let allToppings = {toppings: ["extraCheese", "Peperoni"], sides: ["Salad", "Breadsticks", "Sugar Bites"]};
-
-allToppings;
-allToppings.toppings;
-allToppings.sides;
+// allToppings;
+// allToppings.toppings;
+// allToppings.sides;
