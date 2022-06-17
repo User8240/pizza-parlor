@@ -33,11 +33,12 @@ Copyright (c) _6/17/2022_ _Grace Kostanich_
 ## Tests
 
 
-**Describe:** _*_
+**Describe:** _Pizza();_
 
 
-**Test:** _It will..._
+**Test:** _It will return a Pizza object with two properties for toppings and size_  
 
-Code: _*_
+Code: _const myPizza = new Pizza(["anchovies", "pineapple"], "medium");_  
 
-Expected Output: _*_
+Expected Output: _Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }_  
+
