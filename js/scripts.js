@@ -8,9 +8,9 @@ let extraCheese = { toppings: "Extra Cheese" };
 let pepperoni = {toppings: "Pepperoni"};
 let blackOlives = {toppings: "Black Olives"};
 let mushrooms = {toppings: "Mushrooms"};
-let bellPeppers = {topping: "Bell Peppers"};
-let bacon = {topping: "Bacon"};
-let sausage = {topping: "Sausage"};
+let bellPeppers = {toppings: "Bell Peppers"};
+let bacon = {toppings: "Bacon"};
+let sausage = {toppings: "Sausage"};
 let regular = {sizes: "Regular"};
 let large = {sizes: "Large"};
 
@@ -21,7 +21,7 @@ let wholeOrder = {
 
 //wholeOrder.toppings;
 
-function checkOrder(userTopping, wholeOrder) {
+function checkOrder(userTopping, userSize, wholeOrder) {
   emptyArray = [];
 
   wholeOrder.toppings.forEach(function(theTopping) {
@@ -30,13 +30,23 @@ function checkOrder(userTopping, wholeOrder) {
     if (theTopping.toppings === userTopping) {
       alert("it worked");
       console.log(theTopping.toppings);
-      emptyArray.append(theTopping.toppings)
+      emptyArray.push(theTopping.toppings)
     } 
   });
-    return emptyArray 
+    
+  wholeOrder.sizes.forEach(function(theSize) {
+    console.log(theSize);
+
+    if (theSize.sizes === userSize) {
+      alert("it worked");
+      console.log(theSize.sizes);
+      emptyArray.push(theSize.sizes)
+    }; 
+  });
+return emptyArray 
 };
 
-checkOrder("Mushrooms", wholeOrder);
+checkOrder("Mushrooms", "Regular", wholeOrder);
 console.log(emptyArray);
 
 //emptyArray.push
