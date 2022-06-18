@@ -55,3 +55,17 @@ _{toppings: Array(2), size: Array(3)}_
 _(2) ['extraCheese', 'Peperoni']_  
 _allToppings.size_  
 _(3) ['Regular', 'Large']_    
+
+**Test:** _It will loop through each object, check it's value to see if it's equal to the users input, and if true, the value will be pushed to an array_  
+
+Code: _checkOrder("Pepperoni", wholeOrder);  
+console.log(emptyArray);_  
+
+Expected Output: _{toppings: 'Extra Cheese'}  
+VM3062:28 {toppings: 'Pepperoni'}    
+VM3062:28 {toppings: 'Black Olives'}  
+VM3062:28 {toppings: 'Mushrooms'}  
+VM3062:28 {topping: 'Bell Peppers'}  
+VM3062:28 {topping: 'Bacon'}  
+VM3062:28 {topping: 'Sausage'}  
+VM3062:40 ['Pepperoni']_  
