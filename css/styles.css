@@ -1,0 +1,86 @@
+#show-order {
+  display: none;
+}
+
+  .bg-color {
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2Fc%2F5%2Fe%2F122932-blackboard-background-2400x1943-for-xiaomi.jpg&f=1&nofb=1);
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+  }
+
+
+.container {
+  font-family: Helvetica;
+  background-color: rgb(255, 246, 232);
+  outline-style: dashed;
+  outline-color: maroon;
+  padding: 5%;
+  padding-top: .3%;
+  font-family: 'Bebas Neue', 'cursive';
+  height: 50%
+}
+
+.container h3 {
+  text-align: right;
+}
+
+.jumbotron {
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: maroon;
+  outline-style: double;
+  outline-color: #495057;
+  color: black;
+  font-weight:lighter;
+  background-color: rgb(255, 246, 232);
+  padding-bottom: 3%;
+  padding-top: 1%;
+}
+
+.jumbotron h1 {
+  font-size: 6rem;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.img2 {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  display: block;
+  float: center;
+}
+
+.line {
+  padding: .1%;
+  border: solid maroon;
+  background-color: maroon;
+  margin-top: auto;
+  margin-bottom: auto;
+  box-sizing: border-box;
+  margin: 0% ;
+  display: block;
+}
+
+.btn {
+  color: #fff;
+  background-color: #495057;
+  border-color: white;
+}
+
+.btn-custom:hover {
+  color: #fff;
+  background-color: maroon;
+  border-color: pink;
+}
+
+.btn-custom:focus, .btn-custom.focus {
+  color: #fff;
+  background-color: pink;
+  border-color: pink;
+}
+
+.form-group {
+  width: 70%;
+  
+}

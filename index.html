@@ -1,13 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="js/jquery-3.6.0.js"></script>
-  <script src="js/scripts.js"></script>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
   <title>Pizza Parlor</title>
 </head>
 <body>
-
+  <div class="bg-color">
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Little Weezers</h1>
+      </div>
+      <div class="row">
+        <h1>‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Create Your Pizza! ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+            Meet Our Staff!
+        </h1>
+        <p><img class="img2" src="img/weez2.png" alt="A photo of Weezer, our staff"></p>
+      </div>
+      <div class="line">
+      </div>
+      <form id="formOne">
+        <br>
+        <h2>Select Your Toppings:</h2>
+        <div class="form-group"> <label for="extraCheese">Extra Cheese?</label>
+          <select class="form-control" id="extraCheese">
+            <option>--</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="form-group"> <label for="pepperoni">Pepperoni?</label>
+          <select class="form-control" id="pepperoni">
+            <option>--</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="form-group"> <label for="blackOlives">Black Olives</label>
+          <select class="form-control" id="blackOlives">
+            <option>--</option>
+             <option>Yes</option>
+             <option>No</option>
+          </select>
+        </div>
+        <div class="form-group"> <label for="mushrooms">Mushrooms?</label>
+          <select class="form-control" id="mushrooms">
+            <option>--</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="form-group"> <label for="bellPeppers">Bell Peppers?</label>
+          <select class="form-control" id="bellPeppers">
+            <option>--</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="form-group"> <label for="bacon">Bacon?</label>
+          <select class="form-control" id="bacon">
+            <option>--</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="form-group"> <label for="sausage">Sausage?</label>
+          <select class="form-control" id="sausage">
+            <option>--</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <br>
+        <h2>Select Pizza Size:</h2>
+        <div class="form-group"> <label for="size">Regular or Large?</label>
+          <select class="form-control" id="size">
+            <option>--</option>
+            <option>Regular (12in)</option>
+            <option>Large (14in)</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="requests">Any Additional Requests?</label>
+          <input id="requests" class="form-control" type="text">
+        </div>
+        <button type="submit" class="btn btn-custom">Place Order</button>
+      </form>     
+      <button id="hideResults" class="btn btn-custom">Reset</button>
+      <div id="show-order">
+        <br>
+        <h1>Your Order:</h1>
+        <p>Extra Cheese? <strong><span class="extraCheese"></span></strong></p>
+        <p>Pepperoni? <strong><span class="pepperoni"></span></strong></p>
+        <p>Black Olives? <strong><span class="blackOlives"></span></strong></p>
+        <p>Mushrooms? <strong><span class="mushrooms"></span></strong></p>
+        <p>Bell Peppers? <strong><span class="bellPeppers"></span></strong></p>
+        <p>Bacon? <strong><span class="bacon"></span></strong></p>
+        <p>Sausage? <strong><span class="sausage"></span></strong></p>
+        <p>Size? <strong><span class="size"></span></strong></p>
+        <p>Additional Requests? <strong><span class="requests"></span></strong></p>
+        <h2><strong><span class="price"></span></strong></h2>
+      </div>
+    </div>    
+  </div>   
 </body>
 </html>
