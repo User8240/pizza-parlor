@@ -22,7 +22,7 @@ _This is a webpage written in HTML using Bootstrap CSS for styling & JavaScript 
 
 ## Known Bugs
 
-* _No known issues_
+* _PLACE ORDER button will not submit after RESET button is clicked_
 
 ## License
 
