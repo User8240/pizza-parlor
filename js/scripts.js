@@ -3,73 +3,66 @@ function Pizza(toppings, sizes){
   this.sizes = sizes;
 };
 
-//define variables/objects for pizza toppings 
-let none = { toppings: "None" };
-let extraCheese = { toppings: "Extra Cheese" };
-let pepperoni = {toppings: "Pepperoni"};
-let blackOlives = {toppings: "Black Olives"};
-let mushrooms = {toppings: "Mushrooms"};
-let bellPeppers = {toppings: "Bell Peppers"};
-let bacon = {toppings: "Bacon"};
-let sausage = {toppings: "Sausage"};
-let regular = {sizes: "Regular"};
-let large = {sizes: "Large"};
+Pizza.prototype.price = function() {
+  let pizzaTotal = 0;
 
-let wholeOrder = {
-  toppings: [none, extraCheese, pepperoni, blackOlives, mushrooms, bellPeppers, bacon, sausage],
-  sizes: [regular, large]
+  if (this.toppings === "Yes") {
+    pizzaTotal += 2; 
+  } else {
+    pizzaTotal += 0;
+  }
+
+  if (this.sizes === "Regular (12in)") {
+    pizzaTotal += 8;
+  } else {
+    pizzaTotal +=12;
+  }
+  return pizzaTotal
 };
 
-// Pizza.prototype.price = function(priceArray){
-//   this.pizzaTotal = 0
-//   if (priceArray[i] === "Regular") {
-//     pizzaTotal += 8 
-//   } else {
-//     pizzaTotal += 12
-//   }
-//   return pizzaTotal
-// };
 
-function checkOrder(userTopping, userSize, wholeOrder) {
-  emptyArray = [];
-  priceArray = [] 
+$(document).ready(function() {
+  $("form#formOne").submit(function(event) {
+    event.preventDefault();
+    let extraCheese= $("#extraCheese").val();
+    let pepperoni = $("#pepperoni").val();
+    let blackOlives = $("#blackOlives").val();
+    let mushrooms = $("#mushrooms").val();
+    let bellPeppers = $("#bellPeppers").val();
+    let bacon = $("#bacon").val();
+    let sausage = $("#sausage").val();
 
-  wholeOrder.toppings.forEach(function(theTopping) {
-    console.log(theTopping);
+    let size = $("#size").val();
+    let requests = $("input#requests").val();
 
-    if (theTopping.toppings === userTopping) {
-      //console.log(theTopping.toppings);
-      emptyArray.push(theTopping.toppings);
-      console.log(userTopping);
-    }; 
+    let order = new Pizza(extraCheese, size);
+    let price = order.price();
+
+    $(".price").text("Your total is $" + price)
+    $(".extraCheese").text(extraCheese);
+    $(".pepperoni").text(pepperoni);
+    $(".blackOlives").text(blackOlives);
+    $(".mushrooms").text(mushrooms);
+    $(".bellPeppers").text(bellPeppers);
+    $(".bacon").text(bacon);
+    $(".sausage").text(sausage);
+    $(".size").text(size);
+    $(".requests").text(requests);
+    $("#show-order").show();
   });
-    
-  wholeOrder.sizes.forEach(function(theSize) {
-    console.log(theSize);
 
-    if (theSize.sizes === userSize) {
-      //console.log(theSize.sizes);
-      priceArray.push(theSize.sizes);
-     }; 
+  $("#hideResults").click(function(event) {
+    $("#extraCheese").val("");
+    $("#pepperoni").val("");
+    $("#blackOlives").val("");
+    $("#mushrooms").val("");
+    $("#bellPeppers").val("");
+    $("#bacon").val("");
+    $("#sausage").val("");
+    $("#size").val("");
+    $("input#requests").val("");
+    $("#show-order").text("");
   });
-return emptyArray 
-};
+});
 
-checkOrder("Mushrooms", "Regular", wholeOrder);
-console.log(emptyArray);
-console.log(priceArray);
-
-
-// $(document).ready(function() {
-//   $("#formOne").submit(function(event) {
-//     event.preventDefault();
-//     let none = $("#none").val();
-//     let userOutput = checkOrder(none);
-//     $(".userOutput").text(userOutput);
-//     console.log(userOutput);
-
-
-//     $("#show-order").show();
-//   });
-// });
 
